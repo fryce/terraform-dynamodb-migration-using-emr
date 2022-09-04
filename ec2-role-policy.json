@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticmapreduce:DescribeStep",
+                "elasticmapreduce:ListInstances",
+                "elasticmapreduce:ListSecurityConfigurations",
+                "elasticmapreduce:ListBootstrapActions",
+                "elasticmapreduce:ViewEventsFromAllClustersInConsole",
+                "elasticmapreduce:ListSteps",
+                "elasticmapreduce:ListClusters",
+                "elasticmapreduce:DescribeCluster",
+                "elasticmapreduce:ListEditors",
+                "elasticmapreduce:ListInstanceGroups"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

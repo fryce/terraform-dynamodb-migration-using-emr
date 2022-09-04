@@ -1,0 +1,32 @@
+#################
+# Vars
+#################
+
+#################
+# AWS Credential
+#################
+aws_source_profile = "xxxxxx"
+aws_target_profile = "xxxxxx"
+
+#################
+# S3 Info
+#################
+
+emr_bucket_name        = "ddb-migration-emr-output-xxxxx"
+target_emr_bucket_name = "ddb-migration-target-emr-output-xxxxx"
+
+#################
+# EMR Parameter
+#################
+
+ddb_throughput_ratio  = "1.0" ## Don't set to 1.0 on Production DDB
+emr_worker_count      = 1 ## EMR Worker Count, set to different number depedning on the source table size
+
+##################
+# DDB
+##################
+
+source_ddb_table_name = "DDBsource"
+target_ddb_table_name = "DDBtarget"
+source_ddb_encryption_key = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+target_ddb_encryption_key = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

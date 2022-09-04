@@ -2,13 +2,11 @@
 
 This module supports to one-off migrate **one DynamoDB table** between different AWS regions from one AWS account to another.
 
-For migration between different source & target accounts sets, need other isolate executions.
-
 
 ## Step 1. Check Prerequisites
 
-- Assume Target DynamoDB table including secondary indexes is ready. (Terraform here won't create for you.)
-- Assume both source and target DDB is encrypted by **KMS CMK**.
+- If there are secondary indexes in source DynamoDB table, then make sure target DynamoDB table is created in advance with secondary indexes. (Terraform here won't create for you.)
+- Make sure both source and target DDB is encrypted by **KMS CMK**.
 - Make sure existed KMS key policy allows the keys to be accessed from target account:
   1. In source account, go to KMS console.
   2. Choose existed CMK used by DynamoDB tables and edit. 
@@ -33,7 +31,7 @@ $ cd ./terraform-dynamodb-migration-using-emr
 ```
 
 
-Configure **tfvars** file (e.g. terraform.tfvars)  under folder [terraform-dynamodb-migration-using-emr](https://github.com/fryce/terraform-dynamodb-migration-using-emr) before *terraform apply*:
+Configure **tfvars** file (e.g. terraform.tfvars) before *terraform apply*:
 
 - AWS Credentials
     - **aws_source_profile**:

@@ -35,7 +35,7 @@ $ cd ./terraform-dynamodb-migration-using-emr
 
 Configure **tfvars** file (e.g. terraform.tfvars)  under folder [terraform-dynamodb-migration-using-emr](https://github.com/fryce/terraform-dynamodb-migration-using-emr) before *terraform apply*:
 
-- AWS Credentials (TODO:  Replace with aws-okta)
+- AWS Credentials
     - **aws_source_profile**:
       The AWS credential profile name associated with source account
     - **aws_target_profile**:
@@ -80,7 +80,7 @@ Configure **tfvars** file (e.g. terraform.tfvars)  under folder [terraform-dynam
 
    `terraform apply <OUTFILENAME>` 
 
-2. Delete migration resources:   ** Data won't be deleted.**
+2. Delete migration resources:   **Data won't be deleted.**
 
    `terraform destroy`
 

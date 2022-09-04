@@ -80,7 +80,7 @@ Configure **tfvars** file (e.g. terraform.tfvars)  under folder [terraform-dynam
 
    `terraform apply <OUTFILENAME>` 
 
-2. Delete migration resources:   ** Data won't be deleted.*
+2. Delete migration resources:   ** Data won't be deleted.**
 
    `terraform destroy`
 
